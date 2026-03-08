@@ -1,62 +1,98 @@
-<script src="script.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zoology 3rd Semester Notes</title>
-
-<style>
-body{
-font-family: Arial;
-background:#f5f7ff;
-text-align:center;
-padding:40px;
-}
-
-.container{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-max-width:600px;
-margin:auto;
-}
-
-h1{
-color:#2c3e50;
-}
-
-button{
-padding:12px 25px;
-font-size:16px;
-background:#3498db;
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
-}
-
-button:hover{
-background:#2980b9;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoology 3rd Semester Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: #4b79a1;
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+    }
+    h1 {
+      margin: 0;
+    }
+    main {
+      margin: 30px;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+    }
+    button {
+      background-color: #6c63ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #5751d9;
+    }
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #e0e0e0;
+      margin-top: 30px;
+      width: 100%;
+    }
+    #notes {
+      margin-top: 20px;
+      text-align: left;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #ccc;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>Zoology 3rd Semester Notes</h1>
+    <p>Study Material for MDSU, Ajmer (2026 Syllabus)</p>
+  </header>
 
-<div class="container">
-<h1>Zoology 3rd Semester</h1>
+  <main>
+    <h2>Welcome to Your Study Portal</h2>
+    <p>Click the button below to generate your Zoology notes.</p>
 
-<p>
-MDSU Ajmer 2026 syllabus ke according study material generate karne ke liye neeche button par click karein.
-</p>
+    <button onclick="generateNotes()">Generate Notes</button>
 
-<a href="study.html">
-<button>Generate Study Material</button>
-</a>
+    <div id="notes"></div>
+  </main>
 
-</div>
+  <footer>
+    <p>&copy; 2026 Afsha Aafridi</p>
+  </footer>
 
+  <script>
+    function generateNotes() {
+      const notesDiv = document.getElementById('notes');
+      notesDiv.innerHTML = `
+        <h3>Animal Tissue Notes</h3>
+        <ul>
+          <li><strong>Epithelial Tissue:</strong> Covers body surfaces, lines cavities, forms glands.</li>
+          <li><strong>Connective Tissue:</strong> Supports and binds other tissues (e.g., bone, cartilage, blood).</li>
+          <li><strong>Muscle Tissue:</strong> Responsible for movement (skeletal, cardiac, smooth).</li>
+          <li><strong>Nervous Tissue:</strong> Transmits electrical impulses; includes neurons and neuroglia.</li>
+        </ul>
+        <p>Ye short notes revision ke liye simple aur ready hai.</p>
+      `;
+    }
+  </script>
 </body>
 </html>
